@@ -20,11 +20,10 @@ The `create_session()` method has the following parameters:
 
 * location (String) &mdash; An IP address that TokBox will use to situate the session in its global network.
 
-  In general, you should pass in a null value as the location hint; if a null value
-is passed in, the session uses a media server based on the location of the first client connecting to the session. Pass a 
-location hint in only if you know the general geographic region (and a representative IP address) and you think the first client
-connecting may not be in that region.
-
+  In general, do not pass in a location hint (or pass in a null value); if no value (or a null value) is passed in,
+the session uses a media server based on the location of the first client connecting to the session. Pass a
+location hint in only if you know the general geographic region (and a representative IP address) and you think the
+first client connecting may not be in that region.
 
 * `properties` (Object) &mdash; Optional. An object used to define
 peer-to-peer preferences for the session. The `properties` option includes one property &mdash;
@@ -48,15 +47,15 @@ For a session created with peer-to-peer streaming enabled, only two clients can 
 If an additional client attempts to connect, the TB object on the client dispatches an exception event.
 
 
-The `create_session` method returns a Session object. This
-object includes a `sessionID` property, which is the session ID for the
+The `create_session` method returns an OpenTokSession object. This
+object includes a `getSessionId()` method, which returns the session ID for the
 new session. For example, when using the OpenTok JavaScript library, use this 
-session ID in JavaScript on the page that you serve to the client. 
+session ID in JavaScript on the page that you serve to the client.
 The JavaScript will use this value when calling the `connect()`
 method of the Session object (to connect a user to an OpenTok session).
 
 OpenTok sessions do not expire. However, authentication tokens do expire (see the next section on the
-<a href="#generate_token">generate_token()</a> method.) Also note that sessions cannot explicitly be destroyed.
+`generate_token()` method.) Also note that sessions cannot explicitly be destroyed.
 
 A session ID string can be up to 255 characters long.
 
