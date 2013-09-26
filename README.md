@@ -27,6 +27,8 @@ the following dependency information to the Project Object Model (pom.xml) file:
 
 ## Requirements
 
+The OpenTok Java SDK requires Java 6 or greater.
+
 You need an OpenTok API key and API secret, which you can obtain at <https://dashboard.tokbox.com>.
 
 # API_Config
