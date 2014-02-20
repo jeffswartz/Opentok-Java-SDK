@@ -51,7 +51,7 @@ class ArchivingSample {
         }
     }
 
-    // The following method logs information on all archives (up to 1000)
+    // The following method logs information on all archives (up to 50)
     // for your API key.
     void listArchives(OpenTok sdk) {
         try {
