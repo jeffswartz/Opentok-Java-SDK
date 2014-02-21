@@ -26,7 +26,7 @@ Tomcat server (into the Tomcat webapps directory).
 ## To run the app for yourself
 
 1. Open the http://localhost:8080/JAXRS-ArchiveSample/ page. (Replace localhost:8080 with the
-path to your Tomcat server.)
+   path to your Tomcat server.)
 
 2. Click the "Host view" button. The Host View page publishes an audio-video stream to an
    OpenTok session. It also includes controls that cause the web server to start and stop archiving.
@@ -86,6 +86,8 @@ and it takes two parameters:
 
 * The sesssion ID of the OpenTok session to archive
 * A name (which is optional and helps identify the archive)
+
+You can only start recording an archive in a session that has active clients connected.
 
 In the page on the web client, the Session object (in JavaScript) dispatches an archiveStarted
 event. The page stores the archive ID (a unique identifier of the archive) in an archiveID variable:
