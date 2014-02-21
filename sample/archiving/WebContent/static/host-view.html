@@ -139,14 +139,6 @@
           $(".start").show();
           $(".stop").hide();
         });
-        
-        session.on('archiveUpdated', function(event) {
-          console.log("ARCHIVE UPDATED");
-        });
-        
-        session.on('archiveDestroyed', function(event) {
-          console.log("ARCHIVE DESTROYED");
-        });
       }
 
       $(document).ready(function() {
