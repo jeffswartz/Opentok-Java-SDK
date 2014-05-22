@@ -187,10 +187,6 @@ You need an OpenTok API key and API secret, which you can obtain at <https://das
 The OpenTok Java SDK requires JDK 6 or greater to compile. Runtime requires Java SE 6 or greater.
 This project is tested on both OpenJDK and Oracle implementations.
 
-# Release Notes
-
-See the [Releases](https://github.com/opentok/opentok-java-sdk/releases) page for details
-about each release.
 
 # Important changes in v2.2
 
